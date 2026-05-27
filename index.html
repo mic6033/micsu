@@ -168,8 +168,8 @@
     .dark .note { color: rgba(245, 241, 232, 0.62); }
     .hero {
       background:
-        linear-gradient(90deg, rgba(16, 19, 22, 0.92), rgba(16, 19, 22, 0.62) 48%, rgba(16, 19, 22, 0.16)),
-        url("assets/trend-hero.jpg") center / cover no-repeat;
+        linear-gradient(125deg, rgba(16,19,22,0.94) 0%, rgba(16,19,22,0.72) 45%, rgba(16,19,22,0.28) 100%),
+        linear-gradient(45deg, #1a0800 0%, #0d1a2a 35%, #0a1a10 65%, #1a1000 100%);
       color: #fffaf0;
     }
     .hero .wrap { position: relative; z-index: 1; }
@@ -654,7 +654,33 @@
           </div>
         </div>
         <figure class="visual">
-          <img src="assets/trend-average.jpg" alt="平均化與重新耦合的抽象視覺" />
+          <svg viewBox="0 0 600 440" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;min-height:440px;display:block">
+            <defs>
+              <linearGradient id="g1a" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1a0500"/><stop offset="100%" stop-color="#0a0a14"/></linearGradient>
+              <linearGradient id="g1b" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#e2472d" stop-opacity="0"/><stop offset="50%" stop-color="#e2472d" stop-opacity=".7"/><stop offset="100%" stop-color="#e2472d" stop-opacity="0"/></linearGradient>
+            </defs>
+            <rect width="600" height="440" fill="url(#g1a)"/>
+            <!-- grid lines -->
+            <g stroke="rgba(255,255,255,0.06)" stroke-width="1">
+              <line x1="0" y1="55" x2="600" y2="55"/><line x1="0" y1="110" x2="600" y2="110"/>
+              <line x1="0" y1="165" x2="600" y2="165"/><line x1="0" y1="220" x2="600" y2="220"/>
+              <line x1="0" y1="275" x2="600" y2="275"/><line x1="0" y1="330" x2="600" y2="330"/>
+              <line x1="0" y1="385" x2="600" y2="385"/>
+              <line x1="75" y1="0" x2="75" y2="440"/><line x1="150" y1="0" x2="150" y2="440"/>
+              <line x1="225" y1="0" x2="225" y2="440"/><line x1="300" y1="0" x2="300" y2="440"/>
+              <line x1="375" y1="0" x2="375" y2="440"/><line x1="450" y1="0" x2="450" y2="440"/>
+              <line x1="525" y1="0" x2="525" y2="440"/>
+            </g>
+            <!-- diagonal break -->
+            <polygon points="0,440 0,100 380,440" fill="rgba(232,71,45,0.08)"/>
+            <line x1="0" y1="100" x2="380" y2="440" stroke="#e2472d" stroke-width="1.5" stroke-dasharray="8,6"/>
+            <!-- label text -->
+            <text x="40" y="60" fill="rgba(255,255,255,0.22)" font-size="10" font-family="monospace" letter-spacing="3">AGE OF AVERAGE</text>
+            <text x="340" y="400" fill="#e2472d" font-size="10" font-family="monospace" letter-spacing="2" opacity=".8">RECOUPLING DESIGN</text>
+            <!-- accent dots -->
+            <circle cx="300" cy="220" r="48" fill="none" stroke="#e2472d" stroke-width="1" opacity=".25"/>
+            <circle cx="300" cy="220" r="6" fill="#e2472d" opacity=".6"/>
+          </svg>
           <figcaption class="visual-label"><span>平均化的格線</span><span>文化破口</span></figcaption>
         </figure>
       </div>
@@ -678,7 +704,23 @@
     <section class="slide" id="issue-2">
       <div class="wrap two-col">
         <figure class="visual">
-          <img src="assets/trend-convenience.jpg" alt="便利與能力化的抽象視覺" />
+          <svg viewBox="0 0 600 440" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;min-height:440px;display:block">
+            <defs>
+              <linearGradient id="g2a" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#00101e"/><stop offset="100%" stop-color="#001a30"/></linearGradient>
+            </defs>
+            <rect width="600" height="440" fill="url(#g2a)"/>
+            <!-- smooth wave (convenience) -->
+            <path d="M0,260 Q150,180 300,260 Q450,340 600,260" fill="none" stroke="#276fb6" stroke-width="2" opacity=".5"/>
+            <path d="M0,280 Q150,200 300,280 Q450,360 600,280" fill="none" stroke="#276fb6" stroke-width="1" opacity=".25"/>
+            <!-- friction wave (skillization) -->
+            <path d="M0,200 L60,200 L80,140 L100,260 L120,180 L140,240 L160,160 L200,200 L300,200 L360,200 L380,130 L400,270 L420,170 L440,250 L460,200 L600,200" fill="none" stroke="#e3a82b" stroke-width="2" opacity=".6"/>
+            <!-- labels -->
+            <text x="30" y="330" fill="#276fb6" font-size="10" font-family="monospace" letter-spacing="2" opacity=".7">LOW FRICTION</text>
+            <text x="30" y="130" fill="#e3a82b" font-size="10" font-family="monospace" letter-spacing="2" opacity=".7">SKILLIZATION</text>
+            <!-- midpoint node -->
+            <circle cx="300" cy="200" r="10" fill="#276fb6" opacity=".4"/>
+            <circle cx="300" cy="200" r="3" fill="#fff" opacity=".6"/>
+          </svg>
           <figcaption class="visual-label"><span>低摩擦流程</span><span>有意義的阻力</span></figcaption>
         </figure>
         <div>
@@ -720,7 +762,34 @@
           </div>
         </div>
         <figure class="visual">
-          <img src="assets/trend-nature.jpg" alt="自然與人類增強的抽象視覺" />
+          <svg viewBox="0 0 600 440" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;min-height:440px;display:block">
+            <defs>
+              <linearGradient id="g3a" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#001a0a"/><stop offset="100%" stop-color="#00100a"/></linearGradient>
+              <radialGradient id="g3b" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#239b68" stop-opacity=".3"/><stop offset="100%" stop-color="#239b68" stop-opacity="0"/></radialGradient>
+            </defs>
+            <rect width="600" height="440" fill="url(#g3a)"/>
+            <ellipse cx="300" cy="220" rx="160" ry="160" fill="url(#g3b)"/>
+            <!-- organic branches -->
+            <g stroke="#239b68" stroke-width="1.2" fill="none" opacity=".5">
+              <path d="M300,220 Q260,170 220,130"/><path d="M300,220 Q340,170 380,130"/>
+              <path d="M300,220 Q250,230 210,260"/><path d="M300,220 Q350,230 390,260"/>
+              <path d="M300,220 Q290,270 300,320"/><path d="M300,220 Q270,200 240,190"/>
+              <path d="M300,220 Q330,200 360,190"/>
+            </g>
+            <!-- nodes -->
+            <g fill="#239b68" opacity=".7">
+              <circle cx="220" cy="130" r="5"/><circle cx="380" cy="130" r="5"/>
+              <circle cx="210" cy="260" r="5"/><circle cx="390" cy="260" r="5"/>
+              <circle cx="300" cy="320" r="5"/><circle cx="240" cy="190" r="4"/>
+              <circle cx="360" cy="190" r="4"/>
+            </g>
+            <circle cx="300" cy="220" r="12" fill="none" stroke="#239b68" stroke-width="1.5" opacity=".6"/>
+            <circle cx="300" cy="220" r="4" fill="#239b68" opacity=".8"/>
+            <!-- tech ring -->
+            <circle cx="300" cy="220" r="90" fill="none" stroke="rgba(39,111,182,0.25)" stroke-width="1" stroke-dasharray="6,5"/>
+            <text x="30" y="40" fill="rgba(255,255,255,0.2)" font-size="10" font-family="monospace" letter-spacing="2">NEXT NATURE</text>
+            <text x="380" y="400" fill="rgba(39,111,182,0.5)" font-size="10" font-family="monospace" letter-spacing="2">ENHANCEMENT</text>
+          </svg>
           <figcaption class="visual-label"><span>生命網絡</span><span>感知延伸</span></figcaption>
         </figure>
       </div>
@@ -744,7 +813,43 @@
     <section class="slide" id="issue-4">
       <div class="wrap two-col">
         <figure class="visual">
-          <img src="assets/trend-cities.jpg" alt="城市展開與都市村落的抽象視覺" />
+          <svg viewBox="0 0 600 440" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;min-height:440px;display:block">
+            <defs>
+              <linearGradient id="g4a" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0f0a00"/><stop offset="100%" stop-color="#1a1000"/></linearGradient>
+            </defs>
+            <rect width="600" height="440" fill="url(#g4a)"/>
+            <!-- city skyline (macro) -->
+            <g fill="rgba(227,168,43,0.12)" stroke="rgba(227,168,43,0.25)" stroke-width="1">
+              <rect x="40"  y="180" width="30" height="220"/>
+              <rect x="80"  y="140" width="40" height="260"/>
+              <rect x="130" y="100" width="50" height="300"/>
+              <rect x="190" y="160" width="35" height="240"/>
+              <rect x="235" y="120" width="55" height="280"/>
+              <rect x="300" y="80"  width="60" height="320"/>
+              <rect x="370" y="130" width="45" height="270"/>
+              <rect x="425" y="160" width="35" height="240"/>
+              <rect x="470" y="110" width="50" height="290"/>
+              <rect x="530" y="150" width="30" height="250"/>
+            </g>
+            <!-- street grid (micro) -->
+            <g stroke="rgba(227,168,43,0.18)" stroke-width="1" fill="none">
+              <line x1="0" y1="380" x2="600" y2="380"/>
+              <line x1="0" y1="410" x2="600" y2="410"/>
+              <line x1="100" y1="370" x2="100" y2="440"/>
+              <line x1="200" y1="370" x2="200" y2="440"/>
+              <line x1="300" y1="370" x2="300" y2="440"/>
+              <line x1="400" y1="370" x2="400" y2="440"/>
+              <line x1="500" y1="370" x2="500" y2="440"/>
+            </g>
+            <!-- human-scale dots -->
+            <g fill="#e3a82b" opacity=".5">
+              <circle cx="150" cy="395" r="3"/><circle cx="170" cy="395" r="3"/>
+              <circle cx="320" cy="395" r="3"/><circle cx="340" cy="395" r="3"/>
+              <circle cx="480" cy="395" r="3"/>
+            </g>
+            <text x="30" y="50" fill="rgba(255,255,255,0.18)" font-size="10" font-family="monospace" letter-spacing="2">UNFOLDING CITIES</text>
+            <text x="340" y="430" fill="rgba(227,168,43,0.55)" font-size="10" font-family="monospace" letter-spacing="2">URBAN VILLAGES</text>
+          </svg>
           <figcaption class="visual-label"><span>大型基礎建設</span><span>社群尺度</span></figcaption>
         </figure>
         <div>
